@@ -97,3 +97,12 @@ footer {
     text-align: center;
 }
 
+#bsb, #lo, #sf, #cm, #pf, #csa {
+    width: 400px;
+    height: 550px;
+    border-radius: 20px;
+}
+
+#Archeology, #Anthropology, #History{
+    padding: 10px;
+}
