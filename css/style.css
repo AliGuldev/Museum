@@ -97,13 +97,13 @@ footer {
     text-align: center;
 }
 
-#bsb, #lo, #sf, #cm, #pf, #csa {
+#bsb, #lo, #sf, #cm, #pf, #csa, #loh, #bsbh, #sfh, #cmh, #pfh, #csah {
     width: 400px;
     height: 550px;
     border-radius: 20px;
 }
 
-#Archeology, #Anthropology, #History {
+#Archeology, #Anthropology, #Histories {
     padding: 10px;
 }
 #nps, #rsk, #bcs, #eha {
@@ -185,3 +185,8 @@ footer {
 .itemName {
     align-self: center;
 }
+
+#ariavalidator {
+    display: none;
+}
+
