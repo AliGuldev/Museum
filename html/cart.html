@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ali Gul">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+</head>
+<body>
+  <header>
+    <h1>Shopping Cart</h1>
+  </header>
+
+  <main>
+    <!-- NEW CONTROLS (Cart page only) -->
+    <div class="controls">
+      <label><input type="checkbox" id="memberToggle"> Member Discount (15%)</label>
+    </div>
+
+    <!-- STATES & OUTPUT AREAS -->
+    <div id="emptyMsg" class="empty" hidden>Your cart is empty.</div>
+    <div id="items" hidden></div>
+    <pre id="summary" hidden></pre>
+
+    <!-- BASIC ACTIONS -->
+    <div class="actions">
+      <button id="clearBtn">Clear Cart</button>
+      <a href="souvenir-shop.html">Keep Shopping</a>
+    </div>
+  </main>
+
+  <script src="../js/cart.js"></script>
+
+</body>
+</html>

@@ -18,12 +18,15 @@
             <button onclick="location.href='collections.html'">Collections</button>
             <button onclick="location.href='staff.html'">Staff</button>
             <button onclick="location.href='souvenir-shop.html'">Souvenir Shop</button>
+            <button onclick="location.href='cart.html'" id="viewCartBtn">View Cart</button>   
+
         </div>
   </header>
 
   <div class="shop-container">
 
     <div class="souvenir-item" data-id="item001">
+      <span class="qty-badge" aria-live="polite"></span>
       <img id="eha" src="../images/souvenir-shop/eha.jpeg" title="May the Wadjet guard you from all harm." alt="A golden replica of the Eye of Horus amulet." onclick="openModal(this)">
       <h3 class="itemName">Eye of Horus Amulet</h3>
       <p><strong>Collection:</strong> Archaeology</p>
@@ -31,10 +34,18 @@
       <p><strong>Found:</strong> Replica of an artifact discovered in the Valley of the Kings.</p>
       <p><strong>Purpose:</strong> Protection and royal power.</p>
       <p><strong>Price:</strong> $24.99</p>
-      <button class="ssbut" onclick="addToCart('item001')">Add Eye of Horus Amulet to Cart</button>
+      <button class="ssbut"
+  onclick="addToCart(this)"
+  data-id="item001"
+  data-name="Eye of Horus Amulet"
+  data-price="24.99"
+  data-image="../images/collections/eha.jpeg">
+  Add Eye of Horus Amulet to Cart
+</button>
     </div>
 
     <div class="souvenir-item" data-id="item002">
+      <span class="qty-badge" aria-live="polite"></span>
       <img id="bcs" src="../images/souvenir-shop/bcs.jpeg" title="A serene guard of home, fertility, and joy." alt="Small black statue of the goddess Bastet in the form of a seated cat." onclick="openModal(this)">
       <h3 class="itemName">Bastet Cat Statue</h3>
       <p><strong>Collection:</strong> Anthropology</p>
@@ -42,10 +53,18 @@
       <p><strong>Found:</strong> Styled after artifacts from the city of Bubastis.</p>
       <p><strong>Purpose:</strong> Warding off evil spirits and celebrating domestic harmony.</p>
       <p><strong>Price:</strong> $45.50</p>
-      <button class="ssbut" onclick="addToCart('item002')">Add Bastet Cat Statue to Cart</button>
+      <button class="ssbut"
+  onclick="addToCart(this)"
+  data-id="item002"
+  data-name="Bastet Cat Statue"
+  data-price="45.50"
+  data-image="../images/collections/bcs.jpeg">
+  Add Bastet Cat Statue to Cart
+</button>
     </div>
 
      <div class="souvenir-item" data-id="item003">
+      <span class="qty-badge" aria-live="polite"></span>
       <img id="rsk" src="../images/souvenir-shop/rsk.jpeg" title="The key to deciphering ancient secrets." alt="A miniature replica of the Rosetta Stone engraved on a keychain." onclick="openModal(this)">
       <h3 class="itemName">Rosetta Stone Keychain</h3>
       <p><strong>Collection:</strong> History</p>
@@ -53,10 +72,18 @@
       <p><strong>Found:</strong> Replica of the decree found in 1799 in Rosetta.</p>
       <p><strong>Purpose:</strong> Commemoration of linguistic breakthrough and personal organization.</p>
       <p><strong>Price:</strong> $9.99</p>
-      <button class="ssbut" onclick="addToCart('item003')">Add Rosetta Stone Keychain to Cart</button>
+      <button class="ssbut"
+  onclick="addToCart(this)"
+  data-id="item003"
+  data-name="Rosetta Stone Keychain"
+  data-price="9.99"
+  data-image="../images/collections/rsk.jpeg">
+  Add Rosetta Stone Keychain to Cart
+</button>
     </div>
 
      <div class="souvenir-item" data-id="item004">
+      <span class="qty-badge" aria-live="polite"></span>
       <img id="nps" src="../images/souvenir-shop/nps.jpeg" title="Write your own chapter in the Book of the Dead." alt="A blank scroll made from genuine Egyptian papyrus." onclick="openModal(this)">
       <h3 class="itemName">Nile Papyrus Scroll</h3>
       <p><strong>Collection:</strong> Anthropology</p>
@@ -64,7 +91,14 @@
       <p><strong>Found:</strong> Crafted in the traditional manner along the Nile Delta.</p> 
       <p><strong>Purpose:</strong> Writing, art, or historical demonstration.</p>
       <p><strong>Price:</strong> $17.00</p>
-      <button class="ssbut" onclick="addToCart('item004')">Add Nile Papyrus Scroll to Cart</button>
+      <button class="ssbut"
+  onclick="addToCart(this)"
+  data-id="item004"
+  data-name="Nile Papyrus Scroll"
+  data-price="17.00"
+  data-image="../images/collections/nps.jpeg">
+  Add Nile Papyrus Scroll to Cart
+</button>
     </div>
   </div>
 
@@ -75,30 +109,8 @@
     </div>
   </div>
 
-  <script>
-    function addToCart(itemId) {
-      alert("Added " + itemId + " to cart (functionality to come)");
-    }
+  <script src="../js/shop.js"></script>
 
-    function openModal(imgElement) {
-      const modal = document.getElementById("modal");
-      const modalImage = document.getElementById("modal-image");
-      modalImage.src = imgElement.src;
-      modalImage.alt = imgElement.alt;
-      modal.style.display = "block";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("modal");
-      if (event.target === modal) {
-        closeModal();
-      }
-    }
-  </script>
   <footer>
         <p>This is a fictitious website created purely for academic purposes.</p>
         <p>The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.</p>
